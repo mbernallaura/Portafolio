@@ -1,0 +1,16 @@
+.iconSocial{
+    font-size: 38px;
+    color: #E0D9F6;
+}
+
+.iconDivSocial:hover .iconSocial{
+    box-shadow:
+    3px 3px 0.1em #ED1E79,
+    0em 0 0.8em #0CFFE1;
+}
+
+.iconDivSocial:hover .iconText{
+    text-shadow:
+    3px 3px 0.1em #ED1E79,
+    0em 0 0.8em #0CFFE1;
+}

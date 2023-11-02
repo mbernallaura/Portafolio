@@ -1,0 +1,13 @@
+.imageLanding{
+    background-image: url('../../public/images/landing.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imageSidebar{
+    background-image: url('../../public/images/sidebarImg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

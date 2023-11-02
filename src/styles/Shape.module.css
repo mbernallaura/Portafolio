@@ -1,0 +1,35 @@
+.shapeDiv{
+    clip-path: polygon(0 0, 15% 0, 20% 6%, 100% 6%, 100% 94%, 85% 94%, 80% 100%, 0 100% )
+}
+
+.shapeBtn {
+    position: relative;
+    clip-path: polygon(100% 0, 100% 55%, 80% 100%, 0 100%, 0 0);
+}
+
+.shapeSidebar{
+    clip-path: polygon(8% 4%, 85% 4%, 100% 12%, 100% 100%, 23% 100%, 8% 92% );
+}
+
+.shapeCardPlay{
+    clip-path: polygon(0 0, calc(100% - 20%) 0, 100%  calc(100% - 80%), 100% 100%, 0 100%);
+}
+
+.spaceMusicPlay{
+    flex: 0 0 calc(33.33% - 10px);
+}
+
+.styleScroll{
+    overflow: auto;
+}
+.styleScroll::-webkit-scrollbar{
+    width: 7px;
+}
+
+.styleScroll::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, .2)
+}
+
+.shapeCards{
+    clip-path: polygon(0 6%, 70% 5%, 80% 0, 100% 0, 100% 95%, 30% 95%, 20% 100%, 0 100% );
+}

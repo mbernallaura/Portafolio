@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caprasimo&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caprasimo&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Kanit:wght@100;200;400&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caprasimo&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Kanit:wght@100;200;400&family=Teko&family=Zen+Dots&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
