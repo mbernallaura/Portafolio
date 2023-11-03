@@ -8,9 +8,7 @@ export async function GET(request) {
             ...r.fields,
         }));
 
-        const projects = objects.sort((a, b) => a.id - b.id);
-
-        return NextResponse.json({ projects });
+        return NextResponse.json( objects.sort((a, b) => a.id - b.id) );
     } catch (error) {
         console.log(airtableBD);
         console.error("Error al obtener los registros:", error);
