@@ -30,12 +30,14 @@ export const MusicPlay = () => {
                         />
                     </button>
 
-                    <Image
-                        src={ musicPlay.play }
-                        width={ 50 }
-                        height={ 50 }
-                        alt='play'
-                    />
+                    <button>
+                        <Image
+                            src={ musicPlay.play }
+                            width={ 50 }
+                            height={ 50 }
+                            alt='play'
+                        />
+                    </button>
 
                     {/* <Image
                         src={ musicPlay.pause}
