@@ -17,8 +17,7 @@ const ProjectsPage = () => {
             setProjectsData([]); // Establecer un valor por defecto en caso de error
         });
     }, [])
-    
-    // console.log(projectsData);
+
 
     return (
         <ShapePages stylePage={ 'bg-gradient-to-b from-ciberBluedark to-black' }>
@@ -26,7 +25,7 @@ const ProjectsPage = () => {
             <div className="mt-8 pt-6 flex flex-wrap gap-5 border-t-2 border-ciberBluedark">
                 {
                     projectsData.map(({id, name, image})=>(
-                        <Card key={ id } name={ name } img={ image }/>
+                        <Card key={ id } name={ name } img={ image } btnVisible="block"/>
                     ))
                 }
             </div>

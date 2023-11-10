@@ -23,7 +23,7 @@ const SkillsPage = () => {
             <div className="mt-8 pt-6 flex flex-wrap gap-5 border-t-2 border-ciberPurple">
                 {
                     skills.map(({id, name, img})=>(
-                        <Card key={ id } name={ name } img={ img }/>
+                        <Card key={ id } name={ name } img={ img } btnVisible="none"/>
                     ))
                 }
             </div>
