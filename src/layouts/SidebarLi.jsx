@@ -2,13 +2,10 @@
 import Link from 'next/link';
 import sidebarStyle from '@/styles/Sidebar.module.css';
 import Image from 'next/image';
-import { selectedLi } from '@/atoms';
-import { useRecoilValue } from 'recoil';
 import { usePathname } from 'next/navigation';
 
 
 export const SidebarLi = ({ name, href, icon, onClick }) => {
-    // const currentRoot = useRecoilValue( selectedLi );
     const endpoint = usePathname();
     
     return (

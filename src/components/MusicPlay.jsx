@@ -1,23 +1,26 @@
-import Image from 'next/image'
-import React from 'react'
+'use client'
+import Image from 'next/image';
 import { TitlePage } from './TitlePage'
 import shapeStyle from '@/styles/Shape.module.css';
 import { Social } from '@/layouts/Social';
+import { useRecoilValue } from 'recoil';
+import { stateMusicPlay } from '@/atoms';
 
 export const MusicPlay = () => {
+    const dataMusicPlay  = useRecoilValue( stateMusicPlay );
     const musicPlay = {
         play: '/images/MusicPlay/play.svg',
         pause: '/images/MusicPlay/pause.svg',
         previous: '/images/MusicPlay/previous.svg',
         next: '/images/MusicPlay/next.svg'
     }
-
-    const prueba = '/images/HeadPage/yo.png';
+    
+    // const prueba = '/images/HeadPage/yo.png';
 
     return (
         <main className='px-3 w-full absolute bottom-0 flex justify-between bg-ciberBluedark'>
             <div className={ `${ shapeStyle.spaceMusicPlay } flex justify-center items-center` }>
-                <TitlePage name={ 'Algo' } imgPage={ prueba } hImg={ 80 } wImg={ 80 } styleNames={'justify-center'}/>
+                <TitlePage name={ dataMusicPlay.title } imgPage={ dataMusicPlay.image } hImg={ 80 } wImg={ 80 } styleNames={'justify-center'}/>
             </div>
             <div className={`${ shapeStyle.spaceMusicPlay } flex-colum items-center justify-center`}>
                 <div className='pt-4 flex items-center justify-center gap-6 '>

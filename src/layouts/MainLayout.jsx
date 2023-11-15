@@ -1,4 +1,5 @@
 "use client";
+import { CardPlay } from "@/components/CardPlay";
 import { MusicPlay } from "@/components/MusicPlay";
 import { Sidebar } from "@/components/Sidebar";
 import { usePathname } from "next/navigation";
@@ -11,6 +12,7 @@ const LayoutHome = ({ children }) => {
                 <div className="flex h-[calc(100%-130px)] ">
                     <Sidebar/>
                     {children}
+                    <CardPlay/>
                 </div>
                 <MusicPlay/>
             </div>
