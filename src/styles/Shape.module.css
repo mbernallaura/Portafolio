@@ -8,7 +8,7 @@
 }
 
 .shapeSidebar{
-    clip-path: polygon(8% 4%, 85% 4%, 100% 12%, 100% 100%, 23% 100%, 8% 92% );
+    clip-path: polygon(5% 4%, 85% 4%, 100% 12%, 100% 100%, 23% 100%, 5% 92% );
 }
 
 .shapeCardPlay{
@@ -32,4 +32,8 @@
 
 .shapeCards{
     clip-path: polygon(0 6%, 70% 5%, 80% 0, 100% 0, 100% 95%, 30% 95%, 20% 100%, 0 100% );
+}
+
+.shapeSelect{
+    clip-path: polygon(0 4%, 70% 4%, 80% 0, 100% 0, 100% 100%, 0 100%);
 }

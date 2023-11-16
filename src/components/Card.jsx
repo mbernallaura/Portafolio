@@ -18,12 +18,9 @@ export const Card = ({ data, name, img, btnVisible='none' }) => {
     }
 
     const handlePlayCard =()=>{
-        console.log('name: ' + data.name);
-        // console.log('Descripcion: '+ description);
         sidebarDeactive( false );
         cardPlayActive( true );
         setData( data ) 
-        // <CardPlay name={ name } description={ description } url={ url } urlRepo={ URLrepo }/>
     }
 
     return (
