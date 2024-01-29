@@ -20,7 +20,7 @@ export const SidebarLi = ({ name, href, icon, onClick }) => {
                     height={ 24 }
                     alt='prueba' 
                 ></Image>
-                <span className={ `${ sidebarStyle.spanPrueba } pt-1 font-teko text-2xl text-ciberWhite` }> { name } </span>
+                <span className={ `${ sidebarStyle.spanPrueba } pt-1 font-teko text-3xl text-ciberWhite` }> { name } </span>
             </Link>
         </li>
     )

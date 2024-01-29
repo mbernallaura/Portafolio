@@ -1,14 +1,16 @@
 'use client'
+import Image from 'next/image';
+import Link from 'next/link';
 import { stateCardPlay, dataProject } from '@/atoms';
 import { useRecoilValue } from 'recoil';
 import { ShapeSelect } from '@/layouts/ShapeSelect';
 import cardStyles from'@/styles/CardMusic.module.css';
-import Image from 'next/image';
+import { FaGithubSquare } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 
 export const CardPlay = () => {
     const cardPlayActive = useRecoilValue( stateCardPlay );
     const data = useRecoilValue( dataProject );
-    console.log(typeof data);
     console.log('data: ' + data);
 
     return (
@@ -28,12 +30,14 @@ export const CardPlay = () => {
                     {data.description}
                 </p>
                 <div className='flex mt-4 justify-end'>
-                    <button className={`${ cardStyles.cardButtonLeft } py-2 px-4 bg-ciberBluemedium`}>
+                    <Link href={`${data.URLrepo}`} target="_blank" className={`${ cardStyles.cardButtonLeft } flex items-center gap-1 py-2 px-4 font-kanit text-ciberWhite bg-ciberBluemedium`}>
+                        <FaGithubSquare/>
                         Github
-                    </button>
-                    <button className={`${ cardStyles.cardButtonRight }  py-2 pr-3 pl-6 bg-ciberPurple`}>
-                        Sitio Web
-                    </button>
+                    </Link>
+                    <Link href={`${data.url}`} target="_blank" className={`${ cardStyles.cardButtonRight } flex items-center gap-1 py-2 pr-3 pl-6 font-kanit text-ciberWhite bg-ciberPurple`}>
+                        <TbWorld/>
+                        Website
+                    </Link>
                 </div>
                 
             </ShapeSelect>

@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
+  ],
+  presets: [require("keep-react/preset")],
   theme: {
     extend: {
       colors:{

@@ -18,7 +18,7 @@ export const MusicPlay = () => {
     // const prueba = '/images/HeadPage/yo.png';
 
     return (
-        <main className='px-3 w-full absolute bottom-0 flex justify-between bg-ciberBluedark'>
+        <footer className='px-3 w-full absolute bottom-0 flex justify-between bg-ciberBluedark'>
             <div className={ `${ shapeStyle.spaceMusicPlay } flex justify-center items-center` }>
                 <TitlePage name={ dataMusicPlay.title } imgPage={ dataMusicPlay.image } hImg={ 80 } wImg={ 80 } styleNames={'justify-center'}/>
             </div>
@@ -65,7 +65,7 @@ export const MusicPlay = () => {
             <div className={`${ shapeStyle.spaceMusicPlay } flex gap-4 justify-end items-center`}>
                 <Social/>
             </div>
-        </main>
+        </footer>
     )
 }
 

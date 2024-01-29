@@ -1,23 +1,24 @@
 import { FaGithubSquare, FaDownload, FaLinkedin } from "react-icons/fa";
 import stylesIcon from '@/styles/Icons.module.css';
+import Link from "next/link";
 
 export const Social = () => {
     return (
         <>
-            <div className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
+            <Link href='https://www.linkedin.com/in/ingeniera-laura-bernal/' target="_blank" className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
                 <FaLinkedin className={stylesIcon.iconSocial}/>
                 <span className={`${stylesIcon.iconText} font-kanit text-ciberWhite`}> Linkedin </span>
-            </div>
+            </Link>
 
-            <div className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
+            <Link href='https://github.com/mbernallaura' target="_blank" className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
                 <FaGithubSquare className={stylesIcon.iconSocial}/>
                 <span className={`${stylesIcon.iconText} font-kanit text-ciberWhite`}> Github </span>
-            </div>
+            </Link>
 
-            <div className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
+            <Link href='' target="_blank" className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
                 <FaDownload className={stylesIcon.iconSocial}/>
                 <span className={`${stylesIcon.iconText} font-kanit text-ciberWhite`}> Curriculum </span>
-            </div>
+            </Link>
         </>
     )
 }

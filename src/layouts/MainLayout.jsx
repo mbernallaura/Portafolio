@@ -9,7 +9,7 @@ const LayoutHome = ({ children }) => {
     return (
         <RecoilRoot>
             <div className="h-screen w-screen relative flex-colum justify-between text-white">
-                <div className="flex h-[calc(100%-130px)] ">
+                <div className="h-full grid grid-cols-4 px-5 pt-5 gap-5">
                     <Sidebar/>
                     {children}
                     <CardPlay/>
