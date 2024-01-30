@@ -8,7 +8,6 @@ import { SidebarLi } from '@/layouts';
 
 export const Sidebar = () => {
     const setCurrentRoot  = useSetRecoilState( selectedLi );//useSetRecoilState= guardar el valor de un atom
-    const sidebarActive = useRecoilValue(stateSidebar);
     const dataMusicPlay = useSetRecoilState( stateMusicPlay ); //useRecoilValue = trae el valor del atom actual
 
     const icons = {
@@ -29,7 +28,7 @@ export const Sidebar = () => {
     }
 
     return (
-        sidebarActive && (
+        // sidebarActive && (
             // <div className={`${styles.shapeSidebar} ${imageStyles.imageSidebar} col-span-1 relative z-0`}>
             <div className={`${styles.shapeSidebar} ${imageStyles.imageSidebar} col-span-1 relative z-0`}>
                 <div className='w-full h-full pt-10 flex justify-center backdrop-blur-md'>
@@ -63,6 +62,6 @@ export const Sidebar = () => {
                     </ul>
                 </div>
             </div>
-        )
+        // )
     )
 }

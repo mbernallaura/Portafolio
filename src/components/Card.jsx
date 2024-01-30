@@ -2,13 +2,12 @@
 import shapeStyles from'@/styles/Shape.module.css';
 import musicStyles from'@/styles/CardMusic.module.css';
 import Image from 'next/image';
-import { CardPlay } from './CardPlay';
 import { useSetRecoilState } from 'recoil';
-import { dataProject, stateCardPlay, stateSidebar } from '@/atoms';
+import { dataProject, stateCardPlay, gridPage } from '@/atoms';
 
 export const Card = ({ data, name, img, btnVisible='none' }) => {
     // image, name, description, url, URLrepo
-    const sidebarDeactive  = useSetRecoilState( stateSidebar );
+    const setGridPage  = useSetRecoilState( gridPage );
     const setData  = useSetRecoilState( dataProject );
     const cardPlayActive  = useSetRecoilState( stateCardPlay );
 
@@ -18,7 +17,7 @@ export const Card = ({ data, name, img, btnVisible='none' }) => {
     }
 
     const handlePlayCard =()=>{
-        sidebarDeactive( false );
+        setGridPage("col-span-2");
         cardPlayActive( true );
         setData( data ) 
     }

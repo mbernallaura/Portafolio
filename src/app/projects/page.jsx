@@ -1,5 +1,5 @@
 'use client'
-import { Card, Logo, TitlePage } from "@/components";
+import { Card, TitlePage } from "@/components";
 import Loader from "@/components/Loader";
 import { ShapePages } from "@/layouts"
 import { fetchAirtableData } from "@/lib/APICalls";

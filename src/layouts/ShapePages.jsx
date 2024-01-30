@@ -1,9 +1,13 @@
+'use client';
 import stylesShape from'@/styles/Shape.module.css';
+import { useRecoilValue } from 'recoil';  
+import { gridPage } from '@/atoms';
 
 export const ShapePages = ({ children, stylePage }) => {
+    const getGridPage = useRecoilValue(gridPage);
+
     return (
-        <div className={`${ stylesShape.shapePages } ${ stylePage } ${ stylesShape.styleScroll } col-span-3 p-7`}>
-        {/* // <div className={`${ stylesShape.shapePages } ${ stylePage } ${ stylesShape.styleScroll } w-full flex flex-col mt-5 ml-4 mr-5 px-5 py-4`}> */}
+        <div className={`${ stylesShape.shapePages } ${ stylePage } ${ stylesShape.styleScroll } ${ getGridPage } p-7`}>
             { children }
         </div>
     )

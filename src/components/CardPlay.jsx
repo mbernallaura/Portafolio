@@ -11,7 +11,6 @@ import { TbWorld } from "react-icons/tb";
 export const CardPlay = () => {
     const cardPlayActive = useRecoilValue( stateCardPlay );
     const data = useRecoilValue( dataProject );
-    console.log('data: ' + data);
 
     return (
         cardPlayActive &&(

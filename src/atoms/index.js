@@ -10,10 +10,15 @@ export const selectedLi = atom({
     effects_UNSTABLE: [persistAtom],
 });
 
-export const stateSidebar = atom({
-    key: "sidebar",
-    default: true
-});
+// export const stateSidebar = atom({
+//     key: "sidebar",
+//     default: true
+// });
+
+export const gridPage = atom({
+    key: "gridPage",
+    default: "col-span-3"
+})
 
 export const stateCardPlay = atom({
     key: "cardPlay",
