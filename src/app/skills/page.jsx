@@ -23,7 +23,7 @@ const SkillsPage = () => {
             <div className="mt-8 pt-6 flex flex-wrap gap-5 border-t-2 border-ciberPurple">
                 {
                     skills.map((data)=>(
-                        <Card key={ data.id } data={...data} btnVisible="none"/>
+                        <Card key={ data.id } data={data} btnVisible="none"/>
                     ))
                 }
             </div>
