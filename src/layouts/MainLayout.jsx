@@ -3,20 +3,27 @@ import { CardPlay } from "@/components/CardPlay";
 import { MusicPlay } from "@/components/MusicPlay";
 import { Sidebar } from "@/components/Sidebar";
 import { usePathname } from "next/navigation";
-import { RecoilRoot } from "recoil"; 
+import { RecoilRoot, useRecoilValue } from "recoil"; 
+import { stateCardPlay } from '@/atoms';
 
 const LayoutHome = ({ children }) => {
+    const cardPlayActive = useRecoilValue( stateCardPlay );
+
     return (
-        <RecoilRoot>
+        // <RecoilRoot>
             <div className="h-screen w-screen relative flex-colum justify-between text-white">
                 <div className="h-full grid grid-cols-4 px-5 pt-5 gap-5">
                     <Sidebar/>
                     {children}
                     <CardPlay/>
                 </div>
-                <MusicPlay/>
+                {
+                    cardPlayActive && (
+                        <MusicPlay/>
+                    ) 
+                }
             </div>
-        </RecoilRoot>
+        // {/* </RecoilRoot> */}
     );
 };
 
@@ -34,7 +41,9 @@ const MainLayout = ({ children }) => {
     return rutasSinMenu == pathname ? (
         <LayoutLanding>{ children }</LayoutLanding>
     ) : (
-        <LayoutHome>{ children }</LayoutHome>
+        <RecoilRoot>
+            <LayoutHome>{ children }</LayoutHome>
+        </RecoilRoot>
     );
 };
 

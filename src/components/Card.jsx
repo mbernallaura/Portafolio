@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useSetRecoilState } from 'recoil';
 import { dataProject, stateCardPlay, gridPage } from '@/atoms';
 
-export const Card = ({ data, name, img, btnVisible='none' }) => {
+export const Card = ({ data, btnVisible='none' }) => {
     // image, name, description, url, URLrepo
     const setGridPage  = useSetRecoilState( gridPage );
     const setData  = useSetRecoilState( dataProject );
@@ -19,7 +19,7 @@ export const Card = ({ data, name, img, btnVisible='none' }) => {
     const handlePlayCard =()=>{
         setGridPage("col-span-2");
         cardPlayActive( true );
-        setData( data ) 
+        setData( data );
     }
 
     return (

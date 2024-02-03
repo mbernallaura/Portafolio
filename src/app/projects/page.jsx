@@ -32,7 +32,7 @@ const ProjectsPage = () => {
                     <TitlePage name={'Proyectos'} sizeName={'text-8xl'} styleNames={'justify-end'} imgPage={imgHead} hImg={200} wImg={200} />
                     <div className="mt-8 pt-6 flex flex-wrap gap-5 border-t-2 border-ciberBluedark">
                         {projectsData.map((card) => (
-                            <Card key={card.id} data={...card} btnVisible="block" />
+                            <Card key={card.id} data={card} btnVisible="block" />
                         ))}
                     </div>
                 </div>
