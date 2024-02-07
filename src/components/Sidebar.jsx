@@ -8,7 +8,7 @@ import { SidebarLi } from '@/layouts';
 
 export const Sidebar = () => {
     const setCurrentRoot  = useSetRecoilState( selectedLi );//useSetRecoilState= guardar el valor de un atom
-    const dataMusicPlay = useSetRecoilState( stateMusicPlay ); //useRecoilValue = trae el valor del atom actual
+    // const dataMusicPlay = useSetRecoilState( stateMusicPlay ); //useRecoilValue = trae el valor del atom actual
 
     const icons = {
         about: '/images/sidebar/about.svg',
@@ -24,7 +24,7 @@ export const Sidebar = () => {
 
     const handleItemClick = ( rout, title, image ) =>{
         setCurrentRoot( rout );
-        dataMusicPlay({title: title, image: image});
+        // dataMusicPlay({title: title, image: image});
     }
 
     return (

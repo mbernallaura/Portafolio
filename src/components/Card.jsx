@@ -3,13 +3,14 @@ import shapeStyles from'@/styles/Shape.module.css';
 import musicStyles from'@/styles/CardMusic.module.css';
 import Image from 'next/image';
 import { useSetRecoilState } from 'recoil';
-import { dataProject, stateCardPlay, gridPage } from '@/atoms';
+import { dataProject, stateCardPlay, gridPage, stateMusicPlay } from '@/atoms';
 
 export const Card = ({ data, btnVisible='none' }) => {
     // image, name, description, url, URLrepo
     const setGridPage  = useSetRecoilState( gridPage );
     const setData  = useSetRecoilState( dataProject );
     const cardPlayActive  = useSetRecoilState( stateCardPlay );
+    const dataMusicPlay = useSetRecoilState( stateMusicPlay );
 
     const musicPlay = {
         play: '/images/MusicPlay/playBlack.svg',
@@ -19,6 +20,8 @@ export const Card = ({ data, btnVisible='none' }) => {
     const handlePlayCard =()=>{
         setGridPage("col-span-2");
         cardPlayActive( true );
+        dataMusicPlay({title: data.name, image: data.image});
+        console.log('ID: ' + data.id);
         setData( data );
     }
 
@@ -28,7 +31,7 @@ export const Card = ({ data, btnVisible='none' }) => {
                 <Image
                     src={ data.image }
                     width={ 100 }
-                    height={ 100 }
+                    height={ 250 }
                     alt='img'
                 />
             </div>

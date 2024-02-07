@@ -10,20 +10,18 @@ const LayoutHome = ({ children }) => {
     const cardPlayActive = useRecoilValue( stateCardPlay );
 
     return (
-        // <RecoilRoot>
-            <div className="h-screen w-screen relative flex-colum justify-between text-white">
-                <div className="h-full grid grid-cols-4 px-5 pt-5 gap-5">
-                    <Sidebar/>
-                    {children}
-                    <CardPlay/>
-                </div>
-                {
-                    cardPlayActive && (
-                        <MusicPlay/>
-                    ) 
-                }
+        <div className="h-screen w-screen relative flex-colum justify-between text-white">
+            <div className="h-full grid grid-cols-4 px-5 pt-5 gap-5">
+                <Sidebar/>
+                {children}
+                <CardPlay/>
             </div>
-        // {/* </RecoilRoot> */}
+            {
+                cardPlayActive && (
+                    <MusicPlay/>
+                ) 
+            }
+        </div>
     );
 };
 

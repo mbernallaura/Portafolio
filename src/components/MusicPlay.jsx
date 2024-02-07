@@ -1,13 +1,15 @@
 'use client'
 import Image from 'next/image';
+import { Progress } from "keep-react";
 import { TitlePage } from './TitlePage'
 import shapeStyle from '@/styles/Shape.module.css';
 import { Social } from '@/layouts/Social';
-import { useRecoilValue } from 'recoil';
-import { stateMusicPlay } from '@/atoms';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { dataProject, dataProjects } from '@/atoms';
 
 export const MusicPlay = () => {
-    const dataMusicPlay  = useRecoilValue( stateMusicPlay );
+    const dataSongs = useRecoilValue( dataProjects ); // all array
+    const [idSong, setIdSong] = useRecoilState(dataProject); //select song              
     const musicPlay = {
         play: '/images/MusicPlay/play.svg',
         pause: '/images/MusicPlay/pause.svg',
@@ -15,16 +17,18 @@ export const MusicPlay = () => {
         next: '/images/MusicPlay/next.svg'
     }
     
-    // const prueba = '/images/HeadPage/yo.png';
+    const handleChangeSong = (direction) =>{
+        const currentSongIndex = dataSongs.findIndex(song => song.id === idSong.id);
+        const nextSongIndex = (currentSongIndex + direction + dataSongs.length) % dataSongs.length;
+        setIdSong(dataSongs[nextSongIndex]);
+    }
 
     return (
-        <footer className='px-3 w-full absolute bottom-0 flex justify-between bg-ciberBluedark'>
-            <div className={ `${ shapeStyle.spaceMusicPlay } flex justify-center items-center` }>
-                <TitlePage name={ dataMusicPlay.title } imgPage={ dataMusicPlay.image } hImg={ 80 } wImg={ 80 } styleNames={'justify-center'}/>
-            </div>
-            <div className={`${ shapeStyle.spaceMusicPlay } flex-colum items-center justify-center`}>
-                <div className='pt-4 flex items-center justify-center gap-6 '>
-                    <button>
+        <footer className='p-4 w-full absolute bottom-0 flex justify-between items-center bg-ciberBluedark'>
+            <TitlePage name={ idSong.name } imgPage={ idSong.image } hImg={ 400 } wImg={ 80 } styleNames={'justify-center'}/>
+            <div className='flex flex-col items-center justify-center w-full gap-2'>
+                <div className='flex items-center gap-6 '>
+                    <button onClick={() => handleChangeSong(-1)}>
                         <Image
                             src={ musicPlay.previous }
                             width={ 40 }
@@ -49,7 +53,7 @@ export const MusicPlay = () => {
                         alt='play'
                     /> */}
 
-                    <button>
+                    <button onClick={() => handleChangeSong(1)}>
                         <Image
                             src={ musicPlay.next }
                             width={ 40 }
@@ -58,8 +62,13 @@ export const MusicPlay = () => {
                         />
                     </button>
                 </div>
-                <div className='pb-4 flex items-center justify-center'>
-                    --------------------------------------------
+                <div className='w-full h-1 flex items-center border border-ciberBluemedium rounded'>
+                    {/* <div className="w-full h-2 border border-ciberBluelight rounded mb-2"> */}
+                        <div
+                            className="h-full bg-ciberBluelight rounded"
+                            style={{ width: `50%` }}
+                        ></div>
+                    {/* </div> */}
                 </div>
             </div>
             <div className={`${ shapeStyle.spaceMusicPlay } flex gap-4 justify-end items-center`}>

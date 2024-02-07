@@ -1,12 +1,15 @@
 'use client'
+import { dataProjects } from "@/atoms";
 import { Card, TitlePage } from "@/components";
 import Loader from "@/components/Loader";
 import { ShapePages } from "@/layouts"
 import { fetchAirtableData } from "@/lib/APICalls";
 import { useEffect, useState } from "react";
+import { useSetRecoilState } from "recoil";
 
 const ProjectsPage = () => {
     const imgHead = '/images/HeadPage/projects.png';
+    const allProjects  = useSetRecoilState( dataProjects );
     const [projectsData, setProjectsData] = useState([]);
     const [loader, setLoader] = useState(true); // Establece el valor inicial en true
 
@@ -14,6 +17,7 @@ const ProjectsPage = () => {
         fetchAirtableData()
             .then(data => {
                 setProjectsData(data);
+                allProjects(data);
                 setLoader(false); // Cambia a false cuando los datos se han cargado
             })
             .catch(error => {

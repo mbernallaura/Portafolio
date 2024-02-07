@@ -3,7 +3,7 @@ import shapeStyles from'@/styles/Shape.module.css';
 
 
 
-export const TitlePage = ({name, sizeName ,imgPage, wImg, hImg, styleNames}) => {
+export const TitlePage = ({name, sizeName ,imgPage, wImg , hImg , styleNames}) => {
     return (
         <div className="flex justify-start w-full">
             <div className={`${ shapeStyles.shapeCardPlay }`}>

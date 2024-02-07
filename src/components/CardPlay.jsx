@@ -33,7 +33,7 @@ export const CardPlay = () => {
                         <FaGithubSquare/>
                         Github
                     </Link>
-                    <Link href={`${data.url}`} target="_blank" className={`${ cardStyles.cardButtonRight } flex items-center gap-1 py-2 pr-3 pl-6 font-kanit text-ciberWhite bg-ciberPurple`}>
+                    <Link href={`${data.url}`} target="_blank" className={`${ cardStyles.cardButtonRight } flex items-center gap-1 py-2 pr-3 pl-6 font-kanit text-ciberWhite bg-ciberPink`}>
                         <TbWorld/>
                         Website
                     </Link>

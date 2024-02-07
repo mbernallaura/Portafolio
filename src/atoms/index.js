@@ -34,8 +34,15 @@ export const dataProject = atom({
 export const stateMusicPlay = atom({
     key: "musicPlay",
     default: {
-        image: '/images/HeadPage/yo.png',
-        title: 'Sobre mi'
-    }
+        image: '',
+        title: ''
+    },
+    effects_UNSTABLE: [persistAtom]
+});
+
+export const dataProjects = atom({
+    key: "dataProjects",
+    default: {},
+    effects_UNSTABLE: [persistAtom],
 });
 

@@ -35,6 +35,7 @@
 
 .shapeCards{
     clip-path: polygon(0 6%, 70% 5%, 80% 0, 100% 0, 100% 95%, 30% 95%, 20% 100%, 0 100% );
+    height: inherit;
 }
 
 .shapeSelect{
