@@ -13,18 +13,19 @@ export const Sidebar = () => {
     const icons = {
         about: '/images/sidebar/about.svg',
         proyect: '/images/sidebar/proyects.svg',
-        skills: '/images/sidebar/skills.svg'
+        skills: '/images/sidebar/skills.svg',
+        contact: '/images/sidebar/contact.svg'
     }
 
     const imgs = {
         about: '/images/HeadPage/yo.png',
         projects: '/images/HeadPage/projects.png',
         skills: '/images/HeadPage/skills.png',
+        contact: '/images/HeadPage/contact.jpg'
     }
 
     const handleItemClick = ( rout, title, image ) =>{
         setCurrentRoot( rout );
-        // dataMusicPlay({title: title, image: image});
     }
 
     return (
@@ -58,6 +59,13 @@ export const Sidebar = () => {
                             icon={icons.skills}
                             href={'/skills'}
                             onClick={() => handleItemClick('/skills', 'Habilidades', imgs.skills)}
+                        />
+
+                        <SidebarLi
+                            name={'Redes'}
+                            icon={icons.contact}
+                            href={'/contact'}
+                            onClick={() => handleItemClick('/contact', 'Redes', imgs.contact)}
                         />
                     </ul>
                 </div>

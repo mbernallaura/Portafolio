@@ -4,12 +4,10 @@
 }
 
 .cardMusic:hover .cards{
-    /* background-color: blueviolet; */
     background-color: #ED1E79;
 }
 
 .cardMusic:hover .cardButton{
-    /* display: block; */
     opacity: 1;
 }
 

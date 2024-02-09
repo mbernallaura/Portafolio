@@ -4,29 +4,17 @@ import musicStyles from'@/styles/CardMusic.module.css';
 import Image from 'next/image';
 import { useSetRecoilState } from 'recoil';
 import { dataProject, stateCardPlay, gridPage, stateMusicPlay } from '@/atoms';
+import { useEffect, useState } from 'react';
 
-export const Card = ({ data, btnVisible='none' }) => {
-    // image, name, description, url, URLrepo
-    const setGridPage  = useSetRecoilState( gridPage );
-    const setData  = useSetRecoilState( dataProject );
-    const cardPlayActive  = useSetRecoilState( stateCardPlay );
-    const dataMusicPlay = useSetRecoilState( stateMusicPlay );
+export const Card = ({ data, btnVisible='none', handle }) => {
 
     const musicPlay = {
         play: '/images/MusicPlay/playBlack.svg',
         pause: '/images/MusicPlay/pause.svg',
     }
 
-    const handlePlayCard =()=>{
-        setGridPage("col-span-2");
-        cardPlayActive( true );
-        dataMusicPlay({title: data.name, image: data.image});
-        console.log('ID: ' + data.id);
-        setData( data );
-    }
-
     return (
-        <div className={`${musicStyles.cardMusic} relative flex flex-col h-56 w-[170px] p-4 border-ciberBluedark border-2 bg-black`}>
+        <div className={`${musicStyles.cardMusic} relative flex flex-col h-56 w-[170px] p-4 border-ciberBluedark border-2 bg-black `}>
             <div className={`${ shapeStyles.shapeCards } ${musicStyles.cards} flex justify-center items-center h-32 mb-4 bg-ciberBluemedium`}>
                 <Image
                     src={ data.image }
@@ -40,7 +28,7 @@ export const Card = ({ data, btnVisible='none' }) => {
                 btnVisible === 'block' && (
                 <button 
                     className={musicStyles.cardButton + ' absolute right-6 top-20 opacity-0'}
-                    onClick={ handlePlayCard }
+                    onClick={handle}
                 >
                     <Image 
                         src={ musicPlay.play } 

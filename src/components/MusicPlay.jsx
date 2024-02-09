@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image';
-import { Progress } from "keep-react";
 import { TitlePage } from './TitlePage'
 import shapeStyle from '@/styles/Shape.module.css';
 import { Social } from '@/layouts/Social';
@@ -37,21 +36,21 @@ export const MusicPlay = () => {
                         />
                     </button>
 
-                    <button>
+                    {/* <button>
                         <Image
                             src={ musicPlay.play }
                             width={ 50 }
                             height={ 50 }
                             alt='play'
                         />
-                    </button>
+                    </button> */}
 
-                    {/* <Image
+                    <Image
                         src={ musicPlay.pause}
                         width={ 52 }
                         height={ 52 }
                         alt='play'
-                    /> */}
+                    />
 
                     <button onClick={() => handleChangeSong(1)}>
                         <Image
@@ -62,13 +61,17 @@ export const MusicPlay = () => {
                         />
                     </button>
                 </div>
-                <div className='w-full h-1 flex items-center border border-ciberBluemedium rounded'>
-                    {/* <div className="w-full h-2 border border-ciberBluelight rounded mb-2"> */}
+                <div className='flex items-center justify-between w-full'>
+                    <span className='font-blackOpsOne text-xs'> {idSong.id} : 00</span>
+
+                    <div className='w-4/5 h-1 flex items-center border border-ciberBluemedium rounded'>
                         <div
                             className="h-full bg-ciberBluelight rounded"
-                            style={{ width: `50%` }}
+                            style={{ width: `${(idSong.id / dataSongs.length)* 100}%` }}
                         ></div>
-                    {/* </div> */}
+                    </div>
+
+                    <span className='font-blackOpsOne text-xs'> {dataSongs.length} : 00 </span>
                 </div>
             </div>
             <div className={`${ shapeStyle.spaceMusicPlay } flex gap-4 justify-end items-center`}>
