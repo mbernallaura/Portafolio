@@ -5,6 +5,7 @@ import styles from '@/styles/Shape.module.css';
 import imageStyles from '@/styles/Images.module.css';
 import { Logo } from './Logo';
 import { SidebarLi } from '@/layouts';
+import Link from 'next/link';
 
 export const Sidebar = () => {
     const setCurrentRoot  = useSetRecoilState( selectedLi );//useSetRecoilState= guardar el valor de un atom
@@ -35,8 +36,10 @@ export const Sidebar = () => {
                 <div className='w-full h-full pt-10 flex justify-center backdrop-blur-md'>
                     <ul className='w-screen p-10'>
                         <li className='pb-14 flex justify-center'>
-                            <div className='w-fit flex'>
-                                <Logo widthTitle={'text-5xl'} widthName={'text-lg'} />
+                            <div className='w-fit flex cursor-pointer'>
+                                <Link href={'/'}>
+                                    <Logo widthTitle={'text-4xl'} widthName={'text-lg'} />
+                                </Link>
                             </div>
                         </li>
 
