@@ -2,9 +2,6 @@
 import shapeStyles from'@/styles/Shape.module.css';
 import musicStyles from'@/styles/CardMusic.module.css';
 import Image from 'next/image';
-import { useSetRecoilState } from 'recoil';
-import { dataProject, stateCardPlay, gridPage, stateMusicPlay } from '@/atoms';
-import { useEffect, useState } from 'react';
 
 export const Card = ({ data, btnVisible='none', handle }) => {
 

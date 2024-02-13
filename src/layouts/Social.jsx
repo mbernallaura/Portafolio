@@ -15,7 +15,7 @@ export const Social = () => {
                 <span className={`${stylesIcon.iconText} font-kanit text-ciberWhite`}> Github </span>
             </Link>
 
-            <Link href='https://acrobat.adobe.com/id/urn:aaid:sc:us:162e7484-35da-45c2-adda-1e4a530d0124' target="_blank" className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
+            <Link href='https://acrobat.adobe.com/id/urn:aaid:sc:US:5a6a8fa4-ae26-4033-9652-682cc828dc84' target="_blank" className={`${stylesIcon.iconDivSocial} flex flex-col gap-2 justify-center items-center`}>
                 <FaDownload className={stylesIcon.iconSocial}/>
                 <span className={`${stylesIcon.iconText} font-kanit text-ciberWhite`}> Curriculum </span>
             </Link>

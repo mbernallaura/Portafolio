@@ -6,7 +6,7 @@ const ContactPage = () => {
     const redes = [
         {id: 1, name: 'Linkedin', image: './images/Redes/linkedin.svg', web: 'https://www.linkedin.com/in/ingeniera-laura-bernal/'},
         {id: 2, name: 'Github', image: './images/Skills/github.svg', web : 'https://github.com/mbernallaura'},
-        {id: 3, name: 'Curriculum', image: './images/Redes/resume.svg', web: 'https://acrobat.adobe.com/id/urn:aaid:sc:us:162e7484-35da-45c2-adda-1e4a530d0124'}
+        {id: 3, name: 'Curriculum', image: './images/Redes/resume.svg', web: 'https://acrobat.adobe.com/id/urn:aaid:sc:US:5a6a8fa4-ae26-4033-9652-682cc828dc84'}
     ]
 
     const handleHref = (data)=> {
