@@ -28,6 +28,12 @@ export const CardPlay = () => {
                 <p className='font-kanit'>
                     {data.description}
                 </p>
+                <p className='pt-5 font-blackOpsOne text-2xl'>
+                    Tecnologías Usadas
+                </p>
+                <p className='font-kanit'>
+                    {data.Tech}
+                </p>
                 <div className='flex mt-4 justify-end'>
                     <Link href={`${data.URLrepo}`} target="_blank" className={`${ cardStyles.cardButtonLeft } flex items-center gap-1 py-2 px-4 font-kanit text-ciberWhite bg-ciberBluemedium`}>
                         <FaGithubSquare/>
